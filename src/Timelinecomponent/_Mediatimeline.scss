@@ -1,0 +1,114 @@
+@import "../global.scss"; 
+
+@media (max-width: 768px) {
+  .timelinecontainer {
+    padding: 1rem; 
+    font-size: 14px; 
+  }
+
+  .timelinetitle {
+    font-size: 28px; 
+    text-align: center; 
+    margin-bottom: 10px; 
+  }
+
+  #timeline {
+    margin-left: 0; 
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 20px;
+    position: relative; 
+  }
+
+  .date {
+    position: static; 
+    font-size: 1em; 
+    margin-bottom: 5px; 
+  }
+
+  .circle {
+    display: none; 
+  }
+
+  .content {
+    max-height: none; 
+    padding: 15px; 
+    border: 1px solid $footer-color; 
+    border-radius: 8px; 
+
+    p {
+      color: $footer-color; 
+      word-wrap: break-word; 
+    }
+  }
+
+  label {
+    font-size: 1.2em; 
+    position: static; 
+    margin-bottom: 10px; 
+  }
+
+  .radio {
+    display: none; 
+  }
+
+  .content {
+    transform: none;
+    max-height: none;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .timelinecontainer {
+    padding: 0.5rem; 
+    font-size: 12px; 
+  }
+
+  .timelinetitle {
+    font-size: 24px; 
+    text-align: center; 
+    margin-bottom: 10px;
+  }
+
+  #timeline {
+    margin-left: 0; 
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 15px; 
+  }
+
+  .date {
+    font-size: 0.9em; 
+    margin-bottom: 4px;
+  }
+
+  .circle {
+    display: none; 
+  }
+
+  .content {
+    max-height: none; 
+    padding: 10px; 
+    border: 1px solid $footer-color;
+    border-radius: 8px;
+
+    p {
+      color: $footer-color;
+      word-wrap: break-word; 
+    }
+  }
+
+  label {
+    font-size: 1.1em; 
+    margin-bottom: 8px; 
+  }
+
+  .radio {
+    display: none; 
+  }
+}

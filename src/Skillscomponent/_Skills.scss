@@ -1,0 +1,103 @@
+@import "../global.scss";
+@import "./Mediaskill";
+
+.Skill-container {
+  text-align: center;
+  padding: 3rem;
+  background-color: $secondary-color;
+
+  .Skill__heading {
+    font-family: $main-font;
+    font-size: 36px;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 50.4px;
+    text-align: start;
+    color: $main-font-color;
+  }
+
+  .Skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+
+    .Skill__icon {
+      display: inline-block;
+      position: relative;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: typewriter 1s ease-out forwards;
+      padding: 1rem;
+
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      &:nth-child(1) { animation-delay: 0.2s; }
+      &:nth-child(2) { animation-delay: 0.4s; }
+      &:nth-child(3) { animation-delay: 0.6s; }
+      &:nth-child(4) { animation-delay: 0.8s; }
+      &:nth-child(5) { animation-delay: 1s; }
+      &:nth-child(6) { animation-delay: 1.2s; }
+      &:nth-child(7) { animation-delay: 1.4s; }
+      &:nth-child(8) { animation-delay: 1.6s; }
+      &:nth-child(9) { animation-delay: 1.8s; }
+      &:nth-child(10) { animation-delay: 2s; }
+      &:nth-child(11) { animation-delay: 2.2s; }
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px $white-color;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        // Ripple Effect
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 200%;
+          height: 200%;
+          background: $white-color;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          animation: ripple 0.6s ease-out forwards;
+        }
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes typewriter {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes ripple {
+    0% {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0;
+    }
+  }
+
+}

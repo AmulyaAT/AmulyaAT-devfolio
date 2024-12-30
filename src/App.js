@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from "react";
+import "./App.css";
+import Loading from "./Loadingcomponent/Loading";
+const Footer = lazy(() => import("./Footercomponent/Footer"));
+const Header = lazy(() => import("./Headercomponent/Header"));
+const Main = lazy(() => import("./Maincomponent/Main"));
+const Project = lazy(() => import("./Projectcomponent/Project"));
+const Skills = lazy(() => import("./Skillscomponent/Skills"));
+const Certificate = lazy(() => import("./Certificationscomponent/Certificate"));
+const Contact = lazy(() => import("./Contactformcomponent/Contactme"));
+const Time = lazy(() => import("./Timelinecomponent/Timeline"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<div><Loading/></div>}>
+      <Header />
+      <div>
+        <div id="main">
+          <Main />
+        </div>
+        <div id="skills">
+          <Skills />
+        </div>
+        <div id="Journey">
+          <Time />
+        </div>
+        <div id="project">
+          <Project />
+        </div>
+        <div id="certificate">
+          <Certificate />
+        </div>
+        <div id="contactme">
+          <Contact />
+        </div>
+      </div>
+      <Footer />
+    </Suspense>
   );
 }
 

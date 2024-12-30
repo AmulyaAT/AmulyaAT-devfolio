@@ -1,0 +1,111 @@
+@import "../global.scss";
+
+.footer {
+  font-family: $secondary-font;
+  color: $background-color;
+  background-color: $main-font-color;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  user-select: none;
+
+  &__logo-container {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+    &__logo {
+      width: 6rem;//logo width
+      height: auto;
+      z-index: 1;
+    }
+
+    &__thought-cloud {
+      position: absolute;
+      top: -4.8rem; // Position above the logo
+      left: 50%;
+      transform: translateX(-50%);
+      background: $secondary-color;
+      color: $white-color;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      width: 15.5rem;
+      max-width: 20rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: $secondary-color;
+      }
+    }
+
+    &:hover .footer__logo-container__thought-cloud {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    &-link {
+      display: inline-block;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__icon {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__mail {
+    margin: 0.5rem 0;
+    color: $background-color;
+
+    &-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &__copy {
+    margin: 0.5rem 0;
+    color: $background-color;
+
+    p {
+      margin: 0;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}

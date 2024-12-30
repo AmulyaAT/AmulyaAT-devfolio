@@ -1,0 +1,28 @@
+@import "../global.scss"; 
+
+/* Media Queries for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1.5rem;
+        font-size: 10px;
+    }
+
+    .name {
+        font-size: 30px;
+        line-height: 56px;
+        margin-top: 20px;
+    }
+
+    .para {
+        font-size: 0.875rem;
+        padding: 0 1rem;
+    }
+
+    .resume_btn {
+        .download-resume-button {
+            font-size: 1rem;
+            padding: 8px 16px;
+            margin-top: 15px;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import "../global.scss";
+
+.main-container {
+    color: $main-font-color;
+    background-color: $background-color ;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;              
+    justify-content: center;                          
+    user-select: none;
+    padding: 3rem;
+}
+
+.name{
+    margin-top: 50px;
+    font-family: Unbounded , "Unbounded placeholder" , sans-serif;
+    /* Font & Text */
+    font-size: 130px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 163.2px;
+    text-align: center;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: pre-wrap;
+    word-spacing: 0px;
+    /* Color & Background */
+    background-attachment: scroll;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+}
+
+.para{
+    font-size: 1rem;
+    text-align: center;
+    font-family: $secondary-font;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.resume_btn
+    .download-resume-button , .view-resume-button {
+        font-family: $secondary-font;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: $footer-color;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        transition: background-color 0.3s ease;
+      
+        &:hover {
+          background-color: darken($main-font-color, 10%);
+          color: $secondary-color;
+        }
+      }
+
+

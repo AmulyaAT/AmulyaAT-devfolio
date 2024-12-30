@@ -1,0 +1,113 @@
+@import "../global.scss";
+@media (max-width: 1024px) {
+    .Skill-container {
+      padding: 2.5rem;
+    }
+  
+    .Skill__heading {
+      font-size: 32px;
+      line-height: 45px;
+    }
+  
+    .Skill-grid {
+      gap: 20px;
+    }
+  
+    .Skill__icon {
+      padding: 0.8rem;
+      img {
+        width: 45px;
+        height: 45px;
+      }
+  
+      &:hover {
+        transform: scale(1.05);  
+        box-shadow: 0 0 15px $white-color;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Skill-container {
+      padding: 2rem;
+    }
+  
+    .Skill__heading {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  
+    .Skill-grid {
+      gap: 15px;
+    }
+  
+    .Skill__icon {
+      padding: 0.5rem;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+  
+      &:hover {
+        transform: scale(1.1);  
+        box-shadow: 0 0 20px $white-color;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Skill-container {
+      padding: 1.5rem;
+    }
+  
+    .Skill__heading {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  
+    .Skill-grid {
+      gap: 10px;
+    }
+  
+    .Skill__icon {
+      padding: 0.25rem;
+      img {
+        width: 35px;
+        height: 35px;
+      }
+  
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px $white-color;
+      }
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .Skill-container {
+      padding: 1rem;
+    }
+  
+    .Skill__heading {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  
+    .Skill-grid {
+      gap: 8px;
+    }
+  
+    .Skill__icon {
+      padding: 0.2rem;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+  
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px $white-color;
+      }
+    }
+  }
+  

@@ -1,0 +1,53 @@
+@import "../global.scss";
+
+@media (max-width: 768px) {
+    .Contact-container {
+        padding: 2rem;
+    }
+
+    .title-header {
+        font-size: 1.5rem; 
+        line-height: 2rem;
+    }
+
+    .Form {
+        width: 90%;
+    }
+
+    .Form input,
+    .Form textarea {
+        padding: 0.75rem;
+        font-size: 0.9rem; 
+    }
+
+    .Form button {
+        padding: 0.5rem 1rem; 
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .Contact-container {
+        padding: 1rem; 
+    }
+
+    .title-header {
+        font-size: 1.25rem; 
+        line-height: 1.5rem;
+    }
+
+    .Form {
+        width: 100%; 
+    }
+
+    .Form input,
+    .Form textarea {
+        padding: 0.5rem; 
+        font-size: 0.8rem; 
+    }
+
+    .Form button {
+        padding: 0.5rem;
+        font-size: 0.8rem; 
+    }
+}

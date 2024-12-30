@@ -1,0 +1,143 @@
+@import "../global.scss";
+
+.project__container {
+  background: $background-color;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 3rem;
+
+  .projectheading {
+    font-family: Unbounded, "Unbounded Placeholder", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: normal;
+    line-height: 50.4px;
+    text-decoration: none;
+    text-align: start;
+    text-indent: 0px;
+    color: rgb(224, 52, 0);
+    padding: 1rem;
+  }
+
+  .project__images-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    justify-content: start;
+    margin-bottom: 4rem;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    background: rgba(245, 198, 190, 0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+
+  .project__images {
+    width: 25rem;
+    height: 20rem;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    scroll-snap-align: center;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1) rotateY(10deg) translateY(-15px);
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
+      z-index: 2;
+      transition: transform 0.5s ease, box-shadow 0.3s ease;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fit;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &:hover::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  .project-title {
+    font-family: $secondary-font;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 1rem;
+    color: $main-font-color;
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+
+    .projectheading {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
+    .project__images-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .project__images {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+
+    .projectheading {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .project__images-container {
+      gap: 20px;
+    }
+
+    .project__images {
+      width: 100%;
+    }
+  }
+}
